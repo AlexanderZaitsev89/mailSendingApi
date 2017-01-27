@@ -22,7 +22,7 @@ s.on('request', function(request, response) {
         subject = information.subject;
         content = new helper.Content("text/plain", information.content);
         mail = new helper.Mail(from_email, subject, to_email, content);
-        var sg = require('sendgrid')('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');
+        var sg = require('sendgrid')("here should be your sendGrid key");
         var request = sg.emptyRequest({
             method: 'POST',
             path: '/v3/mail/send',
